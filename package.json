@@ -12,7 +12,12 @@
   "author": "yash",
   "license": "ISC",
   "dependencies": {
+    "bcrypt-nodejs": "^0.0.3",
+    "body-parser": "^1.19.2",
+    "cors": "^2.8.5",
     "express": "^4.17.3",
+    "jwt-simple": "^0.5.6",
+    "mongoose": "^6.2.6",
     "nodemon": "^2.0.15"
   }
 }
