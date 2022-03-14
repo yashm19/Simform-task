@@ -30,6 +30,7 @@ router.post('/login', async (req, res) => {
             })
         }
 
+        //using bcrypt to compare the hashed passwords
         bcrypt.compare(userData.password, user.password, (err, isMatch) => {
             if (!isMatch) {
                 res.sendStatus(401).send({
