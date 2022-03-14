@@ -46,7 +46,9 @@ app.put('/profile/:id', async (req, res) => {
                 if (err) {
                     res.send("Error: ", err);
                 } else {
-                    res.send("password updated successfully!");
+                    res.send({
+                        message: "success"
+                    }).status(200);
                 }
             })
         }

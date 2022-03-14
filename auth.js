@@ -25,7 +25,7 @@ router.post('/login', async (req, res) => {
             email: userData.email
         })
         if (!user) {
-            res.sendStatus(401).send({
+           return res.status(401).send({
                 message: 'email or password invalid'
             })
         }
@@ -33,7 +33,7 @@ router.post('/login', async (req, res) => {
         //using bcrypt to compare the hashed passwords
         bcrypt.compare(userData.password, user.password, (err, isMatch) => {
             if (!isMatch) {
-                res.sendStatus(401).send({
+               return res.status(401).send({
                     message: 'Invalid Credentials'
                 })
             }
